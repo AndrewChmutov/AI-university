@@ -1,0 +1,22 @@
+(define (problem five-blocks)
+    (:domain world-of-blocks)
+    (:objects a b c d e)
+    (:init
+        (on-floor a)
+        (on-floor d)
+        (on-top b a)
+        (on-top e d)
+        (on-top c b)
+        (clear c)
+        (clear e)
+    )
+    (:goal
+        (and
+            (on-floor a)
+            (on-floor b)
+            (on-floor c)
+            (on-floor d)
+            (on-floor e)
+        )
+    )
+)
